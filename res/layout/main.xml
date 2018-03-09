@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/layout1"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:id="@+id/btnLayout"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dip"
+		android:visibility="gone"
+        android:orientation="horizontal" >
+     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dip"
+        android:orientation="horizontal" 
+        android:visibility="gone">
+         <Button
+            android:id="@+id/btn_testall"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/testall" />
+		   <Button
+            android:id="@+id/btn_result"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/Result" />
+		</LinearLayout>
+	<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dip"
+        android:orientation="horizontal" 
+        android:visibility="gone">
+        <Button
+            android:id="@+id/btn_test_result"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/TestResult" />
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/Cancel" />
+        <Button
+            android:id="@+id/btn_clear"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/Clear" />
+     </LinearLayout>
+     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dip"
+        android:orientation="horizontal"
+        android:visibility="gone">
+        <Button
+            android:id="@+id/btn_uninstall"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/Uninstall" />
+
+        <Button
+            android:id="@+id/btn_send"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/Send" />
+
+        <Button
+            android:id="@+id/btn_reset"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/Recovery" />
+      </LinearLayout>
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dip"
+        android:orientation="horizontal"
+        android:visibility="gone">
+       <Spinner
+            android:id="@+id/GroupTestSpinner"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:visibility="gone" />
+        <ToggleButton android:id="@+id/gti_toggle"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textOn="@string/gti_on"
+            android:textOff="@string/gti_off"
+            android:checked="false" />
+        </LinearLayout>
+      </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="150dip"
+        android:layout_height="150dip"
+        android:gravity="center"
+		android:layout_centerInParent="true"
+		android:layout_above="@id/btnLayout"
+		android:visibility="gone">
+
+        <com.DeviceTest.view.MyGridView
+            android:id="@+id/myGridView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </com.DeviceTest.view.MyGridView>
+    </LinearLayout>
+    
+    <ScrollView 
+        android:id="@+id/sl_container"
+        android:layout_marginTop="20dp"
+        android:layout_width="150dp"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_ptest"
+        android:layout_centerHorizontal="true">
+        <LinearLayout 
+            android:id="@+id/layout_res_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"/>
+    </ScrollView>
+    
+    
+     <Button
+        android:id="@+id/btn_retry_failed_unknow"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="@string/test_fail_unknow"
+        android:layout_above="@+id/btn_ptest"
+        android:layout_marginLeft="16dp"/>
+    
+     <Button
+        android:id="@+id/btn_test_all"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="@string/test_all"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="12dp"/>
+     
+    <Button
+        android:id="@+id/btn_ptest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Ptest"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="1dip"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>

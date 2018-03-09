@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/layout1"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:id="@+id/btnLayout"
+        android:layout_alignParentBottom="true"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dip"
+        android:orientation="horizontal" >
+
+        <Spinner
+            android:id="@+id/GroupTestSpinner"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:visibility="gone" />
+        <Button
+            android:id="@+id/btn_return"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/Return" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/btnLayout"
+        android:layout_alignParentTop="true" >
+
+        <com.DeviceTest.view.MyGridView
+            android:id="@+id/myGridView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+        </com.DeviceTest.view.MyGridView>
+    </LinearLayout>
+</RelativeLayout>

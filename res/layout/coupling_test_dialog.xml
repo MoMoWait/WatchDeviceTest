@@ -1,0 +1,60 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >.
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/coupling_power"
+            android:textSize="24sp" />
+        <EditText
+            android:id="@+id/oupling_power"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:textSize="24sp"
+            android:text="@string/default_power" />
+        <Button android:id="@+id/btn_start_coupling_test"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:text="@string/start_coupling_test" />
+        <Button android:id="@+id/btn_stop_coupling_test"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:text="@string/stop_coupling_test"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <RadioGroup android:id="@+id/choose_group"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RadioButton android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/band1"
+            android:text="@string/band1"
+            android:checked="true" />
+        <RadioButton android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/band2"
+            android:text="@string/band2"/>
+        <RadioButton android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/band5"
+            android:text="@string/band5"/>
+        <RadioButton android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/band8"
+            android:text="@string/band8"/>
+    </RadioGroup>
+</LinearLayout>

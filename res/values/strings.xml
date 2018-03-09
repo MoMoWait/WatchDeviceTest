@@ -1,0 +1,618 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">devicetest tool</string>
+    <string name="test_success_info">All test success!</string>
+    <string name="VibrationTitle">Vibration Test</string>
+    <string name="VibrationContent">Is the device vibrating?</string>
+    <string name="devicetest">Device Test</string>
+    <string name="stresstest">Stress Test</string>
+    
+    <string name="SpeakerTitle">Speak Test</string>
+    <string name="SpeakerContent">Can you hear the voice?</string>
+    <string name="Left">Left</string>
+    <string name="Right">Right</string>
+    <string name="SpeakerTip">Is speaker sounding? yes: pass, no: fail</string>
+    <string name="LeftMsgBase">Left: whether only the left channel is playing music?</string>
+    <string name="RightMsgBase">Right: whether only the right channel is playing music?</string>
+    <string name="LeftMsg">Left: how many times have you heard？\n Please click below button.</string>
+    <string name="RightMsg">Right: how many times have you heard？\n Please click below button.</string>
+    
+    <string name="BrightnessTitle">Brightness Test</string>
+    <string name="BrightnessTitleStop">Stop brightness test</string>
+    <string name="BrightnessSubTitle">Please observe the change of brightness.</string>
+    <string name="BrightnessPassCode">Pass Code:</string>
+    <string name="BrightnessMessage">Please choose the pass code!</string>
+    
+    <string name="BluetoothTitle">Bluetooth Test</string>
+    <string name="BluetoothSubTitle">Find bluetooth device:</string>
+    <string name="BluetoothAdapterFail">Find bluetooth device failed!</string>
+    <string name="BluetoothScan">Scanning devices</string>
+    <string name="BluetoothInit">Please wait fow the device initializing.</string>
+    <string name="BluetoothOpenF">Fail to open bluetooth!</string>
+    <string name="BluetoothFindF">Fail to find devices.</string>
+    <string name="BluetoothFindS">Found devices.\n Pass!</string>
+    <string name="bt_pass_info">PASS!</string>
+    <string name="CameraTitle">Camera Test</string>
+    <string name="CameratextMsgText">Please click the screen to open camera</string>
+    <string name="CameraFlashTitle">Camera and Flash Test</string>
+    <string name="CameraFlashtextFront">Please click screen to open front camera,then click preview screen to take photo</string>
+    <string name="CameraFlashtextBack">Please click screen to open back camera,then click preview screen to take photo with flash on</string>
+    <string name="CameraFlashtextOk">Test end</string>
+    <string name="GpsTestTitle">Gps C/No Test</string>
+    <string name="GpsTestSubTitle">Please observe device.</string>
+    <string name="GpsTestResult">Please wait fow the device initializing.</string>
+    <string name="GpsLocationTestTitle">Gps Location Test</string>
+    <string name="GpsLocationTestSubTitle">Please observe the device.</string>
+    <string name="GpsLocationTestResult">Please wait fow the device initializing.</string>
+    <string name="gpstextx">X axis C/No:</string>
+    <string name="gpstexty">Y axis C/No:</string>
+    <string name="gpstestx">Test X axis</string>
+    <string name="gpstesty">Test Y axis</string>
+    <!-- GpsTestActivity -->
+        <string name="gps_satellites">Satellites</string>
+        <string name="gps_satellites_passed">Passed Satellites:</string>
+        <string name="gps_test_time">Time:</string>
+        <string name="gps_wait_ttff">Wait for TTFF</string>
+         <!-- GpsTestActivity -->
+        <string name="key_test_vol_increase">VOLUME+</string>
+        <string name="key_test_vol_decrease">VOLUME+</string>
+
+            <!-- SimCardTestActivity -->
+        <string name="sim_test_cannot_get_imei1">"Can't get IMSI1"</string>
+        <string name="sim_test_cannot_get_imei2">"Can't get IMSI2"</string>
+    
+    <string name="HeadsetMicTitle">Headset Mic Test</string>
+    <string name="HeadsetMicSubTitle">Please speak to the mic, then check playback with headset.</string>
+    <string name="HeadsetMicPlay">Please press headset button to replay.</string>
+    <string name="HeadsetMicSubTitleForLenove">Please speak to the mic, volume should be over 1/3.</string>
+    <string name="LcdTestTitle">Lcd Test</string>
+    <string name="LcdTestStart">Click the screen to test.</string>
+    <string name="PhoneMictTitle">Phone Mic Test</string>
+    <string name="PhoneMicSubTitle">Please speak, the playback would be after 3 seconds.</string>
+    <string name="PhoneMicSubTitleForLenove">Please speak to the mic, volume should be over 1/3.</string>
+    <string name="PhoneMicEffective">Recording Effective!</string>
+    <string name="record_error">Encount error when record.</string>
+    <string name="startRecord">Start recording</string>
+    
+    <string name="PowertestTitle">Battery Test</string>
+    <string name="PowertestSubTitle"> Power Test</string>
+    <string name="AcUnplug">Ac Unplug:</string>
+    <string name="AcPlugin">Ac Plugin:</string>
+    <string name="ChargeState">Battery State</string>
+    <string name="Voltage">Battery Voltage:</string>
+    <string name="Capacity">Battery Capacity:</string>
+    <string name="Plug">Battery Plug:</string>
+    
+    <string name="SdCardTitle">SD Card Test</string>
+    <string name="SdCardSubTitle">Please observe the device</string>
+    <string name="SdCardFail">Fail! Cannot find the SD Card</string>
+    <string name="SdCardFind">SD card found, memory: </string>
+    
+    <string name="TouchtestTitle">Touch Test</string>
+    <string name="TouchtestSubTitle">Control buttons will show after double click screen.</string>
+    <string name="VersionTitle">Version Test</string>
+    <string name="Firmwareversion">Firmware version:</string>
+    <string name="Kernelversion">Kernel version:</string>
+    <string name="Basebandversion">Baseband version:</string>
+    <string name="Buildversion">Build version:</string>
+    <string name="VibrationTest">Vibration Test</string>
+    <string name="Wifitest">Wifi Test</string>
+    <string name="WifiSubText">Please check the device.</string>
+    <string name="WifiResultText">Please wait for the device initialize</string>
+    <string name="WifiError">Wifi test fail!</string>
+    <string name="WifiFind">Found Wifi-</string>
+    <string name="WifiTry">Trying to connect to </string>
+    <string name="WifiConnect">Connected to </string>
+    <string name="WifiConnectErr">Can\'t find any router to connect!</string>
+    <string name="WifiPing">Ping Test : </string>
+    <string name="WifiHttp">Http Test: </string>
+    <string name="WifiSignal3">Wifi signal(strong)</string>
+    <string name="WifiSignal2">Wifi signal(middle)</string>
+    <string name="WifiSignal1">Wifi signal(low)</string>
+    <string name="WifiSignal0">Wifi signal(bad)</string>
+    <string name="wififindtest">Wifi found</string>
+    <string name="wifi_pass_info">PASS!</string>
+    <string name="SensorTest">Sensor Test</string>
+    <string name="num200">200</string>
+    <string name="gsensorvalue">gsensor value: </string>
+    <string name="Accelerometer">=== Accelerometer === </string>
+    <string name="name_acc"> Name:</string>
+    <string name="vendor_acc"> Vendor:</string>
+    <string name="version_acc"> Version:</string>
+    <string name="maxRange_acc"> Max Range:</string>
+    <string name="resolution_acc"> Resolution:</string>
+    <string name="power_acc"> Power:</string>
+    <string name="sensor_x">x:</string>
+    <string name="sensor_y">y:</string>
+    <string name="sensor_z">z:</string>
+    <string name="Orientation">=== Orientation === </string>
+    <string name="Azimuth"> Azimuth angle:</string>
+    <string name="Pitch"> Pitch:</string>
+    <string name="Roll"> Roll:</string>
+    <string name="Light">=== Light === </string>
+    <string name="lightvalue">Light:</string>
+    <string name="Proximity">=== Proximity === </string>
+    <string name="Magnetic_Field">=== Magnetic_Field === </string>
+    <string name="Temperature">=== Temperature === </string>
+    <string name="Gsensor_x">x up(x:9,y:0,z:0)</string>
+    <string name="Gsensor_y">y up(x:0,y:9,z:0)</string>
+    <string name="Gsensor_z">z up(x:0,y:0,z:9)</string>
+    <string name="Gsensor_xup">x up(x:5)</string>
+    <string name="Gsensor_yup">y up(y:5)</string>
+    <string name="Gsensor_zup">z up(x:0,y:0,z:9)</string>
+    <string name="Gsensor_xdown">x down(x:-5)</string>
+    <string name="Gsensor_ydown">y down(y:-5)</string>
+    <string name="Gsensor_zdown">z down(z:-5)</string>
+    <string name="Gsensor_screen_up_prompt">The arrow pointing to the up direction of device</string>
+    <string name="GSensor_test_prompt">Current value of x、y、z:</string>
+    <string name="GSensor_test_prompt2">the direction of device:</string>
+    <string name="GsensorTest">Gsensor Test</string>
+    <string name="MsensorTest">Msensor Test</string>
+    <string name="LightsensorTest">Light Sensor Test</string>
+    <string name="KeyboardTestTitle">Keyboard Test</string>
+    <string name="KeyboardTestSubTitle">Please test all keys</string>
+    <string name="VolUp">Volume+</string>
+    <string name="VolDown">Volume-</string>
+    <string name="Back">Back</string>
+    <string name="Menu">Menu</string>
+    <string name="Home">Home</string>
+    <string name="FlashLightTest">FlashLight Test</string>
+    <string name="FlashLightTestSubText">Please observe the flashlight of your device when
+        you touch the buttons</string>
+    <string name="OpenFlashLight">Open Flash Light</string>
+    <string name="ShutDownFlashLight">Shut Down Flash Light</string>
+    <string name="SimCardTestTitle">Sim Card Test</string>
+    <string name="MrioUSBTitle"> USB Test</string>
+    <string name="MrioUSBsubTitle">Please plug in USB and wait.</string>
+    <string name="usbplugin1">Plug in USB1:</string>
+    <string name="usbplugin2">Plug in USB2:</string>
+    <string name="usbplugin3">Plug in USB3:</string>
+    <string name="usbplugin4">Plug in USB4:</string>
+    <string name="FMRadioTestTitle">FM Radio Test</string>
+    <string name="FMRadioTextMsgText">Please click the screen to open FM Radio</string>
+    <string name="CirTestTitle">Cir Test</string>
+    <string name="CirSend">Send</string>
+    <string name="CpuInfo">CPU info</string>
+    <string name="MemInfo">MEM info</string>
+    <string name="DmiInfo">DMI info</string>
+    <string name="IrdaTestTitle">IrDA Test</string>
+    <string name="SirSend">Sir Send</string>
+    <string name="SirReceive">Sir Receive</string>
+    <string name="SirTest">Sir Test</string>
+    <string name="FirSend">Fir Send</string>
+    <string name="FirReceive">Fir Receive</string>
+    <string name="FirTest">Fir Test</string>
+    <string name="InsertSdCard">Please insert SD card!</string>
+    <string name="SdCardNospace">SD low memory!</string>
+    <string name="RecordTest">Record Test</string>
+    <string name="HeadsetRecodrSuccess">Success！Now playing back.</string>
+    <string name="RecordError">Record fail！</string>
+    <string name="LedTestTitle">Led Test</string>
+    <string name="Red">Red</string>
+    <string name="Green">Green</string>
+    <string name="Blue">Blue</string>
+    <string name="HdmiTestTitle">HDMI Test</string>
+    <string name="HdmiNoInsert">Please insert HDMI first, then click screen to test!</string>
+    <string name="HdmiPrepare">HDMI initializing... </string>
+    <string name="HdmiResult">Test finished \nIs the screen showing normally?</string>
+    <string name="HdmiStart">Start test!</string>
+    <string name="HdmiStartFail">Fail to start! Please make sure HDMI is plugged in.</string>
+    <string name="HdmiInTestTitle">HDMI IN Test</string>
+    <string name="HdmiInNoInsert">Please plug in HDMI and push HDMI switch button.</string>
+    <string name="HdmiInResult">Test succeed!</string>
+    <string name="StorageTestTitle">Storage Test</string>
+    <string name="StorageSDNoFind">SD card not found...\n</string>
+    <string name="StorageSDCopyF">Fail to copy to SD card!\n</string>
+    <string name="StorageSDCopyS">Succeed to copy to SD card!\n</string>
+    <string name="StorageUsbNoFind">Usb host not found...\n</string>
+    <string name="StorageUsbCopyF">Fail to copy to UbsHost!\n</string>
+    <string name="StorageUsbCopyS">Succeed to copy to UbsHost!\n</string>
+    <string name="RuninTestTitle">Run In Test</string>
+    <string name="stop">Stop</string>
+    <string name="start">Start</string>
+    <string name="btnPassText">Pass</string>
+    <string name="btnFailText">Fail</string>
+    <string name="btnSkipText">Skip</string>
+    <string name="btnRetestText">Retest</string>
+    <string name="OKText">OK!</string>
+    
+    <string name="Cancel">Cancel</string>
+    <string name="Clear">Clear</string>
+    <string name="Uninstall">Uninstall</string>
+    <string name="Send">Send log</string>
+    <string name="Recovery">Recovery</string>
+    <string name="Shutdown">Shut down</string>
+    
+    <string name="Recovery_msg">Are you sure for recovery?</string>
+    <string name="Shutdown_msg">Are you sure to shut down?</string>
+    <string name="Run_runin">Will enter Runin test when boot next time.</string>
+    <string name="Erase_sd">Erase SD</string>
+    <string name="success">Success</string>
+    <string name="fail">Fail</string>
+    <string name="Version">V20111216_01</string>
+    <string name="UsbHostTestTitle">Usb Host Test</string>
+    <string name="BluetoothTestTitle">Bluetooth Test</string>
+    <string name="VibrationTestTitle">Vibration Test</string>
+    <string name="VibrationStart">Vibration Start</string>
+    <string name="VibrationStop">Vibration Stop</string>
+    <string name="PSensorTestTitle">PSensor Test</string>
+    <string name="PSensorApproach">PSensor approach</string>
+    <string name="PSensorAway">PSensor away</string>
+    <string name="Hardware">Hardware: </string>
+    <string name="HostStorageState">Storage State : </string>
+    <string name="Writable">Writable: </string>
+    <string name="WriteData">Write data! </string>
+    <string name="ReadData">Read data! </string>
+    <string name="MakeDir">Make Directory </string>
+    <string name="CreateFile">Create File </string>
+    <string name="FileDel">Delete File </string>
+    <string name="DirDel">Delete Directory </string>
+    <string name="Compare">Compare Files </string>
+    <string name="HardwareSupport">Hardware: support. \nFound device : /dev/block/</string>
+    <string name="HardwareNoSupport">Hardware : device not found! \nPlease plug in device and wait for about 5 seconds.</string>
+    <string name="nand_flash">NAND flash</string>
+    <string name="total_space">Total Space：</string>
+    <string name="available_space">Available Space: </string>
+    <string name="internal_storage">Internal storage</string>
+    <string name="nand_unavailable">Unavailable</string>
+    <string name="read_only">\u0020(Read-only)</string>
+    <string name="camera_switch">Switch</string>
+    <string name="SingleTest">Single Test</string>
+    <string name="NextStep">Next Step</string>
+    <string name="testall">Test All</string>
+    <string name="nocamera">No Camera</string>
+
+    <!-- secret code -->
+    <string name="code_function_test">983*70</string>
+    <string name="code_self_test">987*0</string>
+    <string name="secondtest_title">Function test</string>
+    <string name="product_info">Product info</string>
+    <string name="battery_info">Battery info</string>
+    <string name="pad_test">Pad test</string>
+    <string name="factory_reset">Factory reset</string>
+
+    <!-- Infomation -->
+    <string name="cpu_title">CPU Info:</string>
+    <string name="memory_title">Memory Info:</string>
+    <string name="storage_title">Storage Info:</string>
+
+    <!-- LogSender -->
+    <string name="send_sucess">Succeed to send log!</string>
+    <string name="send_fail">Fail to send log!</string>
+    <string name="login_fail">Fail to connect FTP!</string>
+    <string name="send_sucess_and_recovery">Succeed to send log and recovery.</string>
+    <string name="sending_log">Sending log, please wait...</string>
+
+    <!-- *************************Stress Test ****************************************************** -->
+    <!-- reboot test -->
+    <string name="reboot_title">Reboot Test</string>
+    <string name="btn_start">Start</string>
+    <string name="btn_stop">Stop</string>
+    <string name="btn_exit">Exit</string>
+    <string name="btn_setting">Set max test times</string>
+    <string name="btn_clear">Clear settings</string>
+    <string name="reboot_dialog_msg">Sure to start reboot test? Will start 5 seconds after push OK button.</string>
+    <string name="reboot_dialog_title">Reboot</string>
+    <string name="dialog_ok">OK</string>
+    <string name="dialog_cancel">Cancel</string>
+    <string name="reboot_countdown">Reboot count down: </string>
+    <string name="reboot_time">Reboot time: </string>
+    <string name="reboot_maxtime">Max reboot time: </string>
+    <string name="not_setting">Not set</string>
+    <!-- sleep test -->
+
+    <string name="sleep_title">Sleep Test</string>
+    <string name="wake_string">Waking time(s):</string>
+    <string name="wake_set">Setting</string>
+    <string name="interval_string">Interval time(s):</string>
+    <string name="interval_set">Set interval time</string>
+    <string name="dialog_title">Setting</string>
+    <string name="maxcount_string"> Max test times: </string>
+    <string name="nowcount_string"> Tested times: </string>
+    <string name="max_set">Set max</string>
+
+    <!-- call phone test -->
+    
+    <string name="CallNumTestTitle">Calling Test</string>
+    <string name="btn_call">Call</string>
+    <string name="btn_set">Set</string>
+    <string name="call_num_tv">Call number:</string>
+    
+    <!-- sms send test -->
+    <string name="sms_num">Number：</string>
+    <string name="sms_content">Content：</string>
+    <string name="btn_sent">Send</string>
+    
+    <string name="SmsSendTestTitle">Sms Send Test</string>
+    <string name="send_status">Sms send result:  %1$d success, %2$d failed.</string>
+    
+    <!-- data open test -->
+    <string name="DataOpenTestTitle">Data Open Test</string>
+    <string name="DataOpenTestInit">Data open test will start...</string>
+    <string name="already_test_count">Data already openned %1$d times，Now data status：%2$b.</string>
+
+    <!-- open camera test -->
+    <string name="camera_title">Camera Open Test</string>
+    <string name="use_system">Use system camera UI.</string>
+    <string name="camera_set">Setting</string>
+    <string name="camera_maxtime">Max test times:</string>
+
+    <!-- video test -->
+    <string name="video_title">Video Test</string>
+    <string name="video_path">Video path:</string>
+    <string name="select_video">Select Video</string>
+    <string name="delete_video">Delete Video</string>
+    <string name="error_video">Please select a video first!</string>
+    <string name="video_not_exist">Video not exist!</string>
+
+    <!-- compare -->
+    <string name="server_title">Server</string>
+    <string name="client_title">Client</string>
+    <string name="compare_pro_title">Please wait...</string>
+    <string name="pro_msg_send_sn">Sending SN file to server...</string>
+    <string name="pro_msg_get_ini">Getting INI file from server...</string>
+    <string name="dialog_msg_network_err">Network error！Please check the network and retry.</string>
+    <string name="dialog_msg_unknown_err">Unknown error! Please check the log!</string>
+    <string name="dialog_msg_ini_timeout">Getting ini file from server time out! (10s)</string>
+    <string name="dialog_btn_retry">Retry</string>
+    <string name="dialog_msg_compare_fail">Comparing message fail, please contact engineer!</string>
+
+    <!-- gsensor cali -->
+    <string name="str_title">Current Status: </string>
+    <string name="str_autoclose">Auto-reading close</string>
+    <string name="str_about">About</string>
+    <string name="str_get_offset">GET OFFSET</string>
+    <string name="str_exit">EXIT</string>
+    <string name="str_about_msg">～DMT GSENSOR～</string>
+    <string name="str_calibration">Calibration</string>
+    <string name="str_open_button">Open Calibration Button</string>
+    <string name="str_horizontal">Please keep device horizontal</string>
+    <string name="str_delay">Change delay time</string>
+    <string name="str_acc">       "Current acc :"</string>
+    <string name="str_acc_offset">"Acc offset  :"</string>
+    <string name="str_acc_sigma"> "Acc sigma   :"</string>
+    <string name="str_mag_sigma">MAG SIGMA (uT)</string>
+    <string name="str_ori_sigma">ORI SIGMA </string>
+    <string name="str_mag">MAGNETIC (uT)</string>
+    <string name="str_ori">ORIENTATION :</string>
+    <string name="examine">Examine</string>
+    <string name="calculate_error">Please keep device static!</string>
+    <string name="gsensor_position_unfit">Please keep device horizontal, or gsensor positon error!</string>
+    <string name="no_calibration">Please get gsensor deviation value before calibration!</string>
+    <string name="information">"Notice: please keep device horizontal and wait for 2 seconds. Then click "Examine" button to check verification result. If "Calibration" button is disable, please click "Clear calibration data" first.</string>
+    <string name="str_set_accurate">Set accuracy</string>
+    <string name="str_reset">Calibrate again</string>
+    <string name="str_accurate_info">Accuracy info: </string>
+    <string name="str_dlg_info">Please input acceptable deviation(0~1):</string>
+    <string name="accurate_value_error">"Please input acceptable deviation(0~1)."</string>
+    <string name="gsensor_calibrate_process">"Calibrating gsensor, please wait..."</string>
+    <string name="gsensor_calibrate_success">Calibration finished.</string>
+    <string name="str_already_has_offset">"Gsensor is keeping deviation value. Please click \"Clear calibration data\" button, reboot and calibrate again."</string>
+    <string name="str_wait_reboot">Please reboot and calibrate. </string>
+    <!-- end gsensor cali -->
+
+    <string name="runin_title">Runin Test</string>
+    <string name="test_sleep_result">Sleep Test finished!</string>
+    <string name="test_video_result">Video Test finished!</string>
+    <string name="test_reboot_result">Reboot Test finished!</string>
+    <string name="BackTest">Test "Back" under "Settings" UI</string>
+    <string name="Backpass">Back_Pass</string>
+    <string name="Mutepass">Mute_Pass</string>
+    <string name="TouchPadpass">TouchPad_Pass</string>
+    <string name="Homepass">Home_Pass</string>
+    <string name="Launcherpass">Launcher_Pass</string>
+    <string name="Settingspass">Settings_Pass</string>
+    <string name="Lockpass">Lock_Pass</string>
+    <string name="ScreenRotatepass">ScreenRotate_Pass</string>
+    <string name="Browserpass">Browser_Pass</string>
+    <string name="Enterpass">Enter_Pass</string>
+    <string name="led_name">LED Test</string>
+    <string name="cled">Orange LED</string>
+    <string name="lled">Blue LED</string>
+    <string name="copen">Orange LED open</string>
+    <string name="lopen">Blue LED open</string>
+    <string name="cclose">Orange LED close</string>
+    <string name="lclose">Blue LED close</string>
+    <string name="CONTENT2">Current key</string>
+    <string name="auto">Auto test</string>
+    <string name="manul">Manual test</string>
+    <string name="startTest">Start test</string>
+    <string name="reTest">Retest</string>
+    <string name="fan">Test below keys whether work properly, press pass if yes.</string>
+    <string name="fan1">Icon turn red when long click ENTER button, and blue when release button. If so, please push pass button.</string>
+    <string name="text3">Battery state of charge</string>
+    <string name="text5">Power State</string>
+    <string name="text1">Current battery</string>
+    <string name="TestBack">Push "Back" in Settings screen</string>
+    <string name="backtext">Push "Back" in Settings screen</string>
+    <string name="locktext">Screen Locked</string>
+    <string name="leftbutton">Left long click for over 2s</string>
+    <string name="rightbutton">Right click here</string>
+    <string name="touchpaneltext">TouchPanel Test</string>
+    <string name="paneltext">Draw diagonal on screen</string>
+    <string name="headsetSpeakerTitle">Headset Speaker Test</string>
+    <string name="headsetSpeakerTip">Left: man, Right: woman (please plug in earpiece)</string>
+    <string name="HeadsetTips">Please plug in headset first!</string>
+    <string name="touchtext1">TouchPad Test</string>
+    <string name="touchtext">Please move cursor to all four screen corners, and test left/right buttons by clicking below buttons. </string>
+    <string name="AC_NO_IN_MSG">Please plug in charger and click OK. </string>
+    <string name="AC_NO_IN_TIP">Charger disconnect, please retest!</string>
+    <string name="Network_CHECK_MSG">Please plug in USB network card!</string>
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="four">4</string>
+    <string name="five">5</string>
+    <string name="six">6</string>
+    <string name="seven">7</string>
+    <string name="eight">8</string>
+    <string name="nine">9</string>
+    <string name="resend_log">Resend</string>
+    <string name="selectKeyboard">Getting Keyboard Type.......</string>
+    <string name="touchpanel_fail">Fail</string>
+    <string name="touchpanel_skip">Skip</string>
+    <string name="touchpanel_retest">Retest</string>
+    <string name="touchpanel_dailog_title">Test result</string>
+    <string name="touchpanel_dailog_msg">Fail, need to retest?</string>
+    <string name="touchpanel_test_top">Please test touch panel top edge</string>
+    <string name="touchpanel_test_bottom">Please test touch panel below edge</string>
+    <string name="touchpanel_test_left">Please test touch panel left edge</string>
+    <string name="touchpanel_test_right">Please test touch panel right edge</string>
+    <string name="touchpanel_test_lt2rb">Please test touch panel from left top to right bottom</string>
+    <string name="touchpanel_test_rt2lb">Please test touch panel from right top to left bottom</string>
+    <string name="led_light_button_text">Orange LED test result</string>
+    <string name="led_light_button_text2">Blue LED test result</string>
+    <string name="caps_light_button_text">CapsLock light test result</string>
+    <string name="led_err">Fail!</string>
+    <string name="led_err_reTest">Retest</string>
+    <string name="led_err_fail">Fail</string>
+    <string name="led_text">Introduction: press "1" if LED is orange, press "2" if LED is blue, press "3" if CapsLock light keeps on, press "4" if CapsLock light blinks.</string>
+    <string name="led_light_text">Please check LED state and press corresponding number.</string>
+    <string name="caps_light_text">Please check CapsLk light state and press corresponding number.</string>
+    <string name="usb_write">Succeed to write usb.flg</string>
+    <string name="usb_read">Succeed to read usb.flg</string>
+    <string name="usb_test_success">Success</string>
+    <string name="battery_message">Is the battery info correct?</string>
+    <string name="ac_message">The battery is on charge after AC plugged in, correct? (Please plug in AC first.)</string>
+    <string name="no_ac_message">The battery isn\'t on charge if remove AC, correct? (Please remove AC first.)</string>
+    <string name="shippingMode">Battery under 75% or AC plugged in. Can\'t set battery shipping mode.</string>
+    <string name="shipmode_AC_Dialog">Sending log succeed, but AC plugged in, cann\'t enter shipping mode. Please remove AC first!</string>
+    <string name="resume_findSD">Please wait......</string>
+    <string name="shipmode_Battery_Dialog" formatted="false">Sending log succeed, but battery under 75%, cann\'t enter shipping mode. Please charge the battery to 75% first!</string>
+    <string name="dcac_ac">Please make sure AC plugged in!</string>
+    <string name="dcac_no_ac">Please make sure AC removed!</string>
+    <string name="usb_test_err">Fail</string>
+    <string name="lid_start_test">Please close the screen, and reopen it after 3 seconds.</string>
+    <string name="lid_test_success">Succedd</string>
+    <string name="lid_test_fail">Fail</string>
+    <string name="lid_title">LID Test</string>
+    <string name="hdmi_service_catch_err">Fail to read HDMI info from server!</string>
+    <string name="hdmi_test_success">Neither server nor client has HDMI, success!</string>
+    <string name="hdmi_test_fail">Fails! Server or client has HDMI.</string>
+    <string name="compare_image_fail">Burning fails, please burn the image again!</string>
+    <string name="check_image_err">Fail to obtain reserve zone info!</string>
+    <string name="diss_image_log">Fail to clear image log in reserve zone, please try again!</string>
+    <string name="gsensorangle_start_test1">Please flip screen for over 180°</string>
+    <string name="gsensorangle_start_test2">Please flip screen for less than 180°</string>
+    <string name="gsensorangle_title">Gsensor Angle Test</string>
+    <string name="sensorAngle_read_err">Reading gsensor angle fails</string>
+    <string name="antutu_test">Antutu Test</string>
+    <string name="title_activity_antutu_test">AntutuTestActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="install_apk_title">apk state</string>
+    <string name="for_install_apk">For install</string>
+    <string name="installing_apk">Installing</string>
+    <string name="installed_apk">Installed</string>
+    <string name="EthernetTestTitle">Ethernet Test</string>
+    <string name="EthernetTestFail">Fail to obtain local IP</string>
+    <string name="EthernetTestsuccess">Connecting ethernet success!</string>
+    
+    <string name="first_btn_OK">OK</string>
+    <string name="first_btn_clear">Clear</string>
+    <string name="first_hint">Please plug in scanner</string>
+    
+    <string name="btn_save">Save log</string>
+    <string name="toast_save_sd">Test result saved into SD card</string>
+    <string name="toast_save_inner">Test result saved into internal memory</string>
+    <string name="sdcard_usb_wr_ok">Reading and writing SD card success!</string>
+    
+    <string name="headset_test_prompt1">Please plug in the first pair of headset and mic, press "OK" to start testing: </string>
+    <string name="headset_test_prompt2">Please plug in the second pair of headset and mic, press "OK" to start testing: </string>
+    <string name="headset_test_begin"> OK </string>
+    <string name="headset_result">Please choose "pass" or "fail" according to test result.</string>
+    
+    <string name="sync_server_time_title">Sync Server Time</string>
+    <string name="sync_server_time_ing">Syncing server time... Please make sure network is OK...</string>
+    <string name="sync_server_time_success">Syncing server time success!</string>
+    <string name="sync_server_time_fail">Syncing server time fails!</string>
+    <string name="log_send_dailog1">Network connection fails, please retry available connection. You can press "cancel" to enter test without syncing server time. </string>
+    <string name="retry_sync">Retry</string>
+    <string name="ftp_host">Host</string>
+    <string name="ftp_path">Path</string>
+    <string name="ftp_port">Port</string>
+    <string name="ftp_user">Username</string>
+    <string name="ftp_pwd">Password</string>
+    <string name="ftp_log_title">FTP Configuration</string>
+    <string name="ftp_host_text">10.10.10.55</string>
+    <string name="ftp_port_text">21</string>
+    <string name="ftp_user_text">ecsaioadmin</string>
+    <string name="ftp_pwd_text">ecsaioadmin</string>
+    <string name="ftp_path_text"></string>
+    <string name="ftp_sure">OK</string>
+    <string name="ftp_cancle">Cancel</string>
+    <string name="video_test_title">Video Test</string>
+    <string name="dialog_prompt">Prompt</string>
+    <string name="dialog_message_for_runin">Sure to enter RunIn Test?</string>
+    <string name="SpeakerMsgBase">Is speaker playing music? If yes, please plug in headset to test left and right channels. </string>
+    
+    <string name="wifi_calibration_result">WIFI calibration result: </string>
+    <string name="RF_calibration_result">RF calibration result: </string>
+    <string name="pcba_test_result">PCBA test result: </string>
+    <string name="calibration_result">Calibration result</string>
+    <string name="positive">OK</string>
+    <string name="calibrated">Calibrated</string>
+    <string name="not_calibrated">Not calibrated</string>
+    <string name="pass">Pass</string>
+    <string name="failed">Fail</string>
+
+    <string name="RF">RF</string>
+    <string name="rf_level">RF Power Level</string>
+    <string name="set_rf_level">Set RF power level</string>
+    <string name="get_rf_level">Get RF power level</string>
+    <string name="num0">0</string>
+    <string name="num1">1</string>
+    <string name="num2">2</string>
+    <string name="Result">Examine result</string>
+    <string name="Ptest">Enter ptest mode</string>
+    <string name="gti_on">acm on</string>
+    <string name="gti_off">acm off</string>
+
+    <!-- Proximity-->
+    <string name="proximity_test_title">Proximity test</string>
+    <string name="proximity_test_info">Please aimed the proximity sensor near or away to test:</string>
+    
+    <string name="TestResult">Last Result</string>
+    <string name="Return">Return</string>
+
+    <string name="ChargeTitle">Charge Test</string>
+    <string name="on_charge">Device is on charging...</string>
+    <string name="battery_full">The battery is full</string>
+    <string name="not_on_charge">Charger disconnect</string>
+    
+    <string name="GsensorCalibrateTitle">Gsensor Calibration</string>
+    <string name="GsensorCaliInfo">Please put the device horizontal firstly.</string>
+    <string name="gensor_precali_value">Pre-calibration value: </string>
+    <string name="gensor_postcali_value">After calibration value: </string>
+    <string name="gsensor_diff_value">Diff value: </string>
+    <string name="calibrate">Calibrate</string>
+    <string name="calibration_succeed">Calibration finish.</string>
+    <string name="not_horizontal_info">The diff values are too large, please ensure the device horizontal.</string>
+    <string name="has_calibrated">Has calibrated</string>
+
+    <string name="PsensorCalibrateTitle">Psensor Calibration</string>
+    <string name="PsensorCaliInfo">Please put the device horizontal and keep open above it. </string>
+    <string name="calibration_fails">Calibration fails! </string>
+    <string name="pensor_precali_value">Pre-calibration value: </string>
+    <string name="pensor_postcali_value">After calibration value: </string>
+    <string name="CouplingTestTitle">Coupling Test</string>
+    <string name="coupling_power">Power(dBm): </string>
+    <string name="default_power">23</string>
+    <string name="band1">Band 1 UL-UARFCN 9750</string>
+    <string name="band2">Band 2 UL-UARFCN 9400</string>
+    <string name="band5">Band 5 UL-UARFCN 2800</string>
+    <string name="band8">Band 8 UL-UARFCN 2800</string>
+    <string name="start_coupling_test">Start</string>
+    <string name="stop_coupling_test">Stop</string>
+    <string name="succ">Success</string>
+    <string name="unknow">Unknow</string>
+    <string name="gps_test">GPS Test</string>
+    <string name="search_now">Search now</string>
+    <string name="f_gps_count">Find gps statellite:</string>
+    <string name="gps_pos">GPS position:</string>
+    <string name="test_fail_unknow">Test failed and unknow</string>
+    <string name="test_all">Test all</string>
+    <string name="record_sound_now">Record sound now:</string>
+    <string name="play_sound_now">Play sound now</string>
+</resources>

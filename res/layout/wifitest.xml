@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+  <ScrollView  
+        android:layout_width="wrap_content"  
+        android:layout_height="wrap_content"   
+        android:scrollbars="none" >
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+		android:layout_marginLeft="15dip"
+        android:paddingBottom="60dip" >
+
+        <TextView
+            android:id="@+id/textTitle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:text="@string/Wifitest"
+            android:textSize="20sp"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/wifiInfoText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_horizontal"
+            android:paddingTop="20px"
+            android:textSize="13sp"
+	    android:scrollHorizontally="true"
+            android:visibility="visible" />
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal" >
+
+            <ProgressBar
+                android:id="@+id/wifiprogress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible" >
+            </ProgressBar>
+            <TextView
+                android:id="@+id/pass_info"
+                android:text="@string/wifi_pass_info"
+                android:textColor="#FF0000"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center_horizontal"
+                android:textSize="16sp"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/wifiresultText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/WifiResultText"
+            android:textSize="13sp"
+            android:visibility="visible" />
+    </LinearLayout>
+   </ScrollView>
+    <LinearLayout
+        android:layout_width="200dip"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+		android:layout_marginLeft="15dip"
+        android:layout_marginBottom="25dip"
+        android:orientation="horizontal" 
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/btn_Pass"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+			android:textSize="15dip"
+            android:text="@string/btnPassText" />
+
+        <Button
+            android:id="@+id/btn_Fail"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+			android:textSize="15dip"
+            android:text="@string/btnFailText" />
+
+        <Button
+            android:id="@+id/btn_Skip"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/btnSkipText" />
+
+        <Button
+            android:id="@+id/btn_Retest"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+			android:textSize="15dip"
+            android:text="@string/btnRetestText" />
+    </LinearLayout>
+    <TextView 
+        android:id="@+id/text_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginTop="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:text="@string/gps_test"
+        android:textColor="@color/red"
+        android:layout_marginRight="20dp"/>
+     
+</RelativeLayout>

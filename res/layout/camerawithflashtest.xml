@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <TextView
+        android:id="@+id/CameratestTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:paddingTop="20px"
+        android:text="@string/CameraFlashTitle"
+        android:textSize="13sp"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/CameratestTitle"
+        android:orientation="vertical"
+        android:paddingBottom="20dip" >
+
+        <TextView
+            android:id="@+id/CameratextMsg"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textSize="13sp"
+            android:paddingTop="40px"
+            android:text="@string/CameraFlashtextFront"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="200dip"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="15dip"
+        android:layout_marginBottom="25dip"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_Pass"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="15dip"
+            android:text="@string/btnPassText" />
+
+        <Button
+            android:id="@+id/btn_Fail"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="15dip"
+            android:text="@string/btnFailText" />
+
+        <Button
+            android:id="@+id/btn_Skip"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="15dip"
+            android:text="@string/btnSkipText" />
+
+        <Button
+            android:id="@+id/btn_Retest"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="15dip"
+            android:text="@string/btnRetestText" />
+    </LinearLayout>
+
+</RelativeLayout>

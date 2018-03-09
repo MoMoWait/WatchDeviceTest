@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/black"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dip"
+            android:layout_marginTop="5dip"
+            android:text="@string/ftp_log_title"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:textStyle="bold|italic" />
+    </LinearLayout>
+    
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="?android:attr/listDivider" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp" >
+
+            <TextView
+                android:id="@+id/ftp_host"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ftp_host"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/ftp_host_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:text="@string/ftp_host_text"
+                android:textSize="24sp" >
+
+                <requestFocus />
+            </EditText>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp" >
+
+            <TextView
+                android:id="@+id/ftp_path"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ftp_path"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/ftp_path_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:text="@string/ftp_path_text"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp" >
+
+            <TextView
+                android:id="@+id/ftp_port"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ftp_port"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/ftp_port_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:text="@string/ftp_port_text"
+                android:textSize="24sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp" >
+
+            <TextView
+                android:id="@+id/ftp_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ftp_user"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/ftp_user_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:text="@string/ftp_user_text"
+                android:textSize="24sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp" >
+
+            <TextView
+                android:id="@+id/ftp_pwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ftp_pwd"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/ftp_pwd_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="numberPassword"
+                android:text="@string/ftp_pwd_text"
+                android:textSize="24sp" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp" >
+
+            <Button
+                android:id="@+id/ftp_sure"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="20dp"
+                android:text="@string/ftp_sure"
+                android:textSize="24sp" />
+            
+            <Button
+                android:id="@+id/ftp_cancle"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="20dp"
+                android:text="@string/ftp_cancle"
+                android:textSize="24sp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

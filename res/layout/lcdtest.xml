@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.DeviceTest.view.LcdTestView
+        android:id="@+id/lcdtestview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/lcdtextTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:paddingTop="30dp"
+        android:text="@string/LcdTestTitle"
+        android:textSize="20sp"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lcdtextTitle"
+        android:orientation="vertical"
+        android:paddingBottom="60dip" >
+
+        <TextView
+            android:id="@+id/lcdtestresult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingTop="40px"
+            android:text="@string/LcdTestStart"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="200dip"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+		android:layout_marginLeft="15dip"
+		android:layout_marginBottom="25dip"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_Pass"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+			android:textSize="15dip"
+            android:text="@string/btnPassText" />
+
+        <Button
+            android:id="@+id/btn_Fail"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+			android:textSize="15dip"
+            android:text="@string/btnFailText" />
+
+        <Button
+            android:id="@+id/btn_Skip"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+			android:textSize="15dip"
+            android:text="@string/btnSkipText" />
+
+        <Button
+            android:id="@+id/btn_Retest"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+			android:textSize="15dip"
+            android:text="@string/btnRetestText" />
+    </LinearLayout>
+
+    <TextView 
+        android:id="@+id/text_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginTop="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:text="@string/gps_test"
+        android:textColor="@color/red"
+        android:layout_marginRight="20dp"/>
+</RelativeLayout>
