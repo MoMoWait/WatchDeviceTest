@@ -68,7 +68,7 @@
     <string name="HeadsetMicSubTitleForLenove">Please speak to the mic, volume should be over 1/3.</string>
     <string name="LcdTestTitle">Lcd Test</string>
     <string name="LcdTestStart">Click the screen to test.</string>
-    <string name="PhoneMictTitle">Phone Mic Test</string>
+    <string name="PhoneMictTitle">Sound record/play test</string>
     <string name="PhoneMicSubTitle">Please speak, the playback would be after 3 seconds.</string>
     <string name="PhoneMicSubTitleForLenove">Please speak to the mic, volume should be over 1/3.</string>
     <string name="PhoneMicEffective">Recording Effective!</string>

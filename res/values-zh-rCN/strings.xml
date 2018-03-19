@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
 	<string name="app_name">设备测试工具</string>
-	<string name="test_success_info">"点击确认后请按HOME键执行恢复出厂设置，否则点击取消！"</string>
+	<string name="test_success_info">所有的测试项已通过</string>
 	<string name="SpeakerTitle">扬声器测试</string>
 	<string name="SpeakerContent">是否听到声音?</string>
 	<string name="Left">左</string>
@@ -68,7 +68,7 @@
 	<string name="LcdTestTitle">显示屏测试</string>
 	<string name="LcdTestStart">点击屏幕开始测试</string>
 
-	<string name="PhoneMictTitle">听筒测试</string>
+	<string name="PhoneMictTitle">声音录制/播放测试</string>
 	<string name="PhoneMicSubTitle">请说话，3秒后将回放你刚才说的内容</string>
 	<string name="PhoneMicSubTitleForLenove">请说话，指针偏转大于1/3为有效录音</string>
 	<string name="PhoneMicEffective">录音有效！</string>

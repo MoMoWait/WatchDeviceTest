@@ -13,12 +13,12 @@
 	<TestCase class_name="BrightnessTestActivity" test_group="TEST ALL" first_test="yc">亮度</TestCase>
 	<!-- <TestCase class_name="ProximitySensorTestActivity" test_group="TEST ALL" first_test="yc">距离传感器</TestCase> -->
 	<TestCase class_name="CallNumTestActivity" test_group="TEST ALL" first_test="yc">拨号测试</TestCase>
-	<TestCase class_name="PhoneMicTestActivity" test_group="TEST ALL" first_test="yc">听筒</TestCase>
+	<TestCase class_name="PhoneMicTestActivity" test_group="TEST ALL" first_test="yc">声音</TestCase>
 	<TestCase class_name="VibrationTestActivity" test_group="TEST ALL" first_test="yc">振动</TestCase>
 	<!--<TestCase class_name="CameraWithFlashTestActivity" test_group="TEST ALL" first_test="yc">照相机</TestCase>-->
 	<!--<TestCase class_name="SdCardTestActivity" test_group="TEST ALL" first_test="yc">SD卡</TestCase>-->
 	<!--TestCase class_name="PhoneMicTestActivity" test_group="TEST ALL" first_test="yc">Telephone MIC</TestCase-->
-	<TestCase class_name="SpeakerTestActivity" test_group="TEST ALL" first_test="yc">扬声器</TestCase>
+	<!-- <TestCase class_name="SpeakerTestActivity" test_group="TEST ALL" first_test="yc">扬声器</TestCase> -->
 	<!--<TestCase class_name="HeadsetMicTestActivity" test_group="TEST ALL" first_test="yc">耳机</TestCase>
 	<TestCase class_name="FMRadioTestActivity" test_group="TEST ALL" first_test="yc">收音机</TestCase>
 	<TestCase class_name="LightsensorTestActivity" test_group="TEST ALL" first_test="yc">光感</TestCase>-->

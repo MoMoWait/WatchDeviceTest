@@ -60,7 +60,7 @@ public class GpsTestActivity extends AppBaseActivity {
 	static final int TIMEOUT = 120 * 1000;
 	TestCase.RESULT ttffResult = TestCase.RESULT.UNDEF;
 	TestCase.RESULT cnResult = TestCase.RESULT.UNDEF;
-	static final int MAX_TEST_TIMES = 20;
+	static final int MAX_TEST_TIMES = 50;
 	boolean stop = false;
 	private TextView mTextTime;
 	private TextView mTextResult;
@@ -302,5 +302,10 @@ public class GpsTestActivity extends AppBaseActivity {
 			ControlButtonUtil.mControlButtonView.performFailButtonClick();
 		}
 		
+	}
+	
+	@Override
+	public int getMaxTime() {
+		return 50;
 	}
 }

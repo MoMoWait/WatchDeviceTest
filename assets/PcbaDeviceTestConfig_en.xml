@@ -14,11 +14,11 @@
 	<TestCase class_name="VibrationTestActivity" test_group="TEST ALL" first_test="yc">Vibration</TestCase>
 	<!--<TestCase class_name="CameraWithFlashTestActivity" test_group="TEST ALL" first_test="yc">Camera And Flashlight</TestCase>-->
 	<TestCase class_name="CallNumTestActivity" test_group="TEST ALL" first_test="yc">Calling</TestCase>
-	<TestCase class_name="PhoneMicTestActivity" test_group="TEST ALL" first_test="yc">PhoneMic</TestCase>
+	<TestCase class_name="PhoneMicTestActivity" test_group="TEST ALL" first_test="yc">Sound</TestCase>
     <!--<TestCase class_name="ProximitySensorTestActivity" test_group="TEST ALL" first_test="yc">Proximity Sensor</TestCase> -->	
     <!--<TestCase class_name="SdCardTestActivity" test_group="TEST ALL" first_test="yc">SD Card</TestCase>-->
-	<!--TestCase class_name="PhoneMicTestActivity" test_group="TEST ALL" first_test="yc">Telephone MIC</TestCase-->
-	<TestCase class_name="SpeakerTestActivity" test_group="TEST ALL" first_test="yc">Speaker</TestCase>
+	<!--<TestCase class_name="PhoneMicTestActivity" test_group="TEST ALL" first_test="yc">Telephone MIC</TestCase-->
+	<!--<TestCase class_name="SpeakerTestActivity" test_group="TEST ALL" first_test="yc">Speaker</TestCase>  -->
 	<!--<TestCase class_name="HeadsetMicTestActivity" test_group="TEST ALL" first_test="yc">Headset MIC</TestCase>
 	<TestCase class_name="FMRadioTestActivity" test_group="TEST ALL" first_test="yc">FM Radio</TestCase>
 	<TestCase class_name="LightsensorTestActivity" test_group="TEST ALL" first_test="yc">Lightsensor</TestCase>-->
