@@ -5,7 +5,7 @@
 
     <RelativeLayout
         android:id="@+id/relativeLayout1"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="match_parent" >
 
         <TextView
@@ -15,13 +15,15 @@
             android:layout_centerHorizontal="true"
             android:gravity="center"
             android:text="@string/proximity_test_title"
-            android:textSize="30dip" />
+            android:layout_marginTop="30dp"
+            android:textSize="20sp" />
 
 
         <TextView
             android:id="@+id/testInfo"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
             android:layout_below="@id/txtTitle"
             android:text="@string/proximity_test_info"
             android:textSize="16sp"/>
@@ -32,7 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/testInfo"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="20dp"
         android:src="@drawable/proximity_off" />
 
 
@@ -42,7 +44,8 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:orientation="horizontal" >
+            android:orientation="horizontal" 
+            android:visibility="gone">
 
             <Button
                 android:id="@+id/btn_Pass"
@@ -72,6 +75,18 @@
                 android:layout_weight="1"
                 android:text="@string/btnRetestText" />
         </LinearLayout>
+        
+    	<TextView 
+        	android:id="@+id/text_time"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:textSize="20sp"
+        	android:layout_marginTop="30dp"
+        	android:layout_alignParentRight="true"
+        	android:layout_centerVertical="true"
+        	android:text="@string/gps_test"
+        	android:textColor="@color/red"
+        	android:layout_marginRight="20dp"/>
     </RelativeLayout>
 
 </LinearLayout>

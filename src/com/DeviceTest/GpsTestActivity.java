@@ -168,11 +168,17 @@ public class GpsTestActivity extends AppBaseActivity {
 		mTextResult.setText(getString(R.string.search_now));
 		
 		mrequsetHandler.sendEmptyMessage(1);
-		stop = false;
-		mHandler.postDelayed(timerRunnable, 1000);
+		
 
 
 	}
+    
+    public void onStart(){
+    	super.onStart();
+    	stop = false;
+    	mHandler.postDelayed(timerRunnable, 1000);
+    }
+    
 
     public void onOverTime() {
     };

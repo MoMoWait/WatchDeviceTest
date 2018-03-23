@@ -2,6 +2,10 @@ package com.DeviceTest;
 
 import android.app.Activity;
 import android.content.Context;
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
+import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -17,7 +21,6 @@ import jp.megachips.frizzservice.Frizz;
 import jp.megachips.frizzservice.FrizzEvent;
 import jp.megachips.frizzservice.FrizzListener;
 import jp.megachips.frizzservice.FrizzManager;
-
 import static android.view.WindowManager.LayoutParams.FLAG_FULLSCREEN;
 import static android.view.WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON;
 
@@ -27,7 +30,7 @@ import static android.view.WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON;
  * @date 2015-01-27
  */
 
-public class ProximitySensorTestActivity extends Activity implements FrizzListener {
+public class ProximitySensorTestActivity extends AppBaseActivity implements FrizzListener {
     /**
      * Called when the activity is first created.
      */
@@ -47,10 +50,13 @@ public class ProximitySensorTestActivity extends Activity implements FrizzListen
     private PowerManager localPowerManager = null;//电源管理对象
     private PowerManager.WakeLock localWakeLock = null;//电源锁
     private PowerManager.WakeLock mWakeLock = null;//电源锁
-
+    private boolean mIsComming;
+    private boolean mIsAway;
     private ImageView imageView1;
     boolean isHasCome = false;
-
+    private SensorManager mSensorManager;
+    private SensorEventListener mPorximityListener;
+    private Sensor mProximitySensor;
     protected void onCreate(Bundle paramBundle) {
         super.onCreate(paramBundle);
 
@@ -67,6 +73,25 @@ public class ProximitySensorTestActivity extends Activity implements FrizzListen
 
         this.proximity = this.mgr.getDefaultSensor(Sensor.TYPE_PROXIMITY);
         */
+        mSensorManager = (SensorManager)getSystemService(Context.SENSOR_SERVICE);
+        mPorximityListener = new SensorEventListener() {
+			
+			@Override
+			public void onSensorChanged(SensorEvent evnet) {
+				Log.i(TAG, "onSensorChanged:" + evnet.values[0]);
+				 if (evnet.values[0] > 6F) //2.5f)
+					 myHandler.sendEmptyMessage(MSG_STATUS_AWAY);
+		         else
+		             myHandler.sendEmptyMessage(MSG_STATUS_COME);
+			}
+			
+			@Override
+			public void onAccuracyChanged(Sensor arg0, int arg1) {
+				
+			}
+		};
+		mProximitySensor = mSensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY);
+		Log.i(TAG, "mProximitySensor != null?" + (mProximitySensor != null));
         mFrizzManager = FrizzManager.getFrizzService(this);
         mFrizzManager.debug(this, false);
 
@@ -81,7 +106,7 @@ public class ProximitySensorTestActivity extends Activity implements FrizzListen
                 getClass().getCanonicalName());
         mWakeLock.acquire();
         Log.d(TAG, "onCreate.........");
-
+        
     }
 
     private void releaseWakeLock() {
@@ -93,16 +118,18 @@ public class ProximitySensorTestActivity extends Activity implements FrizzListen
     protected void onResume() {
         super.onResume();
         findViewById(R.id.btn_Pass).setVisibility(View.INVISIBLE);
-
         /*
         this.mgr.registerListener(mSensorListener, this.proximity,
                 SensorManager.SENSOR_DELAY_NORMAL);
                 */
+        if(mProximitySensor != null)
+			mSensorManager.registerListener(mPorximityListener, mProximitySensor, SensorManager.SENSOR_DELAY_FASTEST, null);
         mFrizzManager.registerListener(this, Frizz.Type.SENSOR_TYPE_PROXIMITY, 10000);
         Log.d(TAG, "onResume.........");
         if (!mWakeLock.isHeld()) {
             mWakeLock.acquire();
         }
+        startTimer();
         /*if (!localWakeLock.isHeld()) {
             localWakeLock.acquire();// 申请设备电源锁
         }*/
@@ -114,17 +141,22 @@ public class ProximitySensorTestActivity extends Activity implements FrizzListen
         super.onPause();
         Log.d(TAG, "onPause.........");
 //        this.mgr.unregisterListener(mSensorListener, this.proximity);
+        if(mSensorManager != null)
+        	mSensorManager.unregisterListener(mPorximityListener);
         mFrizzManager.unregisterListener(this, Frizz.Type.SENSOR_TYPE_PROXIMITY);
         localWakeLock.release();
         releaseWakeLock();
+        endTimer();
     }
 
     Handler myHandler = new Handler() {
         public void handleMessage(Message msg) {
             switch (msg.what) {
                 case MSG_STATUS_COME://onNear
-                    isHasCome = true;
+                	mIsComming = true;
                     imageView1.setImageResource(R.drawable.proximity_on);
+                    if(mIsComming && mIsAway)
+                    	 ControlButtonUtil.mControlButtonView.performPassButtonClick();
                 /*if (localWakeLock.isHeld()) {
                     return;
                 } else{
@@ -133,10 +165,9 @@ public class ProximitySensorTestActivity extends Activity implements FrizzListen
                     break;
                 case MSG_STATUS_AWAY://onAway
                     imageView1.setImageResource(R.drawable.proximity_off);
-                    if (isHasCome) {
-                        findViewById(R.id.btn_Pass).setVisibility(View.VISIBLE);
-                        //((Button) findViewById(R.id.btn_Pass)).performClick();
-                    }
+                    mIsAway = true;
+                    if(mIsComming && mIsAway)
+                   	 ControlButtonUtil.mControlButtonView.performPassButtonClick();
                 /*if (localWakeLock.isHeld()) {
                     return;
                 } else{
@@ -167,6 +198,7 @@ public class ProximitySensorTestActivity extends Activity implements FrizzListen
     */
     @Override
     public void onFrizzChanged(FrizzEvent event) {
+    	Log.i(TAG, "onFrizzChanged:" + event.values[0]);
         Frizz.Type frizzType = event.sensor.getType();
         if (Frizz.Type.SENSOR_TYPE_PROXIMITY == frizzType) {
             if (event.values[0] > 6F) //2.5f)
@@ -181,5 +213,10 @@ public class ProximitySensorTestActivity extends Activity implements FrizzListen
             return false;
         }
         return super.dispatchKeyEvent(event);
+    }
+    
+    
+   public void onOverTime(){
+	   ControlButtonUtil.mControlButtonView.performFailButtonClick();
     }
 }

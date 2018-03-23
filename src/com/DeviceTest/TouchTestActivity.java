@@ -58,7 +58,7 @@ public class TouchTestActivity extends Activity {
 		passButton.setVisibility(View.VISIBLE);
 
 		showButtons = false;
-		ControlButtonUtil.Hide();
+		//ControlButtonUtil.Hide();
 		
 		mGestureDetector = new GestureDetector(new GestureListener());
 	}
@@ -117,7 +117,7 @@ public class TouchTestActivity extends Activity {
 			return false;
 		}
 		public boolean onDoubleTap(MotionEvent e){
-			toggleButtonShow();
+			//toggleButtonShow();
 			return false;
 		}
 		public boolean onDoubleTapEvent(MotionEvent e){

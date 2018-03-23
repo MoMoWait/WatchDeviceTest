@@ -286,7 +286,7 @@ public class PointerLocationView extends View implements OnTouchListener {
 				mMaxNumPointers = mCurNumPointers;
 			}
 
-			for (int i = 0; i < NI; i++) {
+			for (int i = 0; i < NI && i < mPointers.size(); i++) {
 				//final int id = event.getPointerId(i);
 				final PointerState ps = mPointers.get(i);
 				ps.mVelocity.addMovement(event);

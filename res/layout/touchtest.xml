@@ -53,9 +53,9 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:paddingTop="20px"
+        android:paddingTop="30dp"
         android:text="@string/TouchtestTitle"
-        android:textSize="14sp"
+        android:textSize="20sp"
         android:visibility="visible" />
 
     <TextView
@@ -64,7 +64,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/TouchtextTitle"
         android:gravity="center_horizontal"
-        android:paddingTop="20px"
+        android:paddingTop="20dp"
         android:text="@string/TouchtestSubTitle"
         android:textSize="14sp"
         android:visibility="visible" />

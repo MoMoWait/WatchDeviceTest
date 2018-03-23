@@ -71,7 +71,7 @@ import com.DeviceTest.helper.TestCase.RESULT;
 import com.DeviceTest.view.MyGridView;
 import com.DeviceTest.view.MyItemView;
 import com.android.internal.os.storage.ExternalStorageFormatter;
-
+import android.os.SystemProperties;
 import android.view.ContextMenu;
 import android.view.LayoutInflater;
 import android.view.View.OnLongClickListener;
@@ -244,14 +244,19 @@ public class PcbaDeviceTest extends Activity {
 
         this.setTitle("DeviceTest");
         mTestCases = xmldoc.mTestCases;
+        Iterator<TestCase> iterator = mTestCases.iterator();
+        while(iterator.hasNext()){
+        	TestCase itemCase = iterator.next();
+        	if(itemCase.getClassName().equals("ProximitySensorTestActivity") && "false".equals(SystemProperties.get("ro.product.proximity", "false")))
+        		iterator.remove();
+        	else
+        		mTestMap.put("com.DeviceTest." + itemCase.getClassName(), itemCase.getTestName());
+        		
+        }
         isOnTestAll = true;
         mLayoutTestResContainer = (LinearLayout)findViewById(R.id.layout_res_container);
         mBtnTestAll = (Button)findViewById(R.id.btn_test_all);
         mBtnTestFaildUnknow = (Button)findViewById(R.id.btn_retry_failed_unknow);
-        for (TestCase testCase : mTestCases) {
-        	mTestMap.put("com.DeviceTest." + testCase.getClassName(), testCase.getTestName());
-        }
-        
         mBtnTestAll.setOnClickListener(new OnClickListener() {
 			
 			@Override

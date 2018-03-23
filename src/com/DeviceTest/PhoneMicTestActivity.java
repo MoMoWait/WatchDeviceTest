@@ -23,7 +23,7 @@ public class PhoneMicTestActivity extends AppBaseActivity {
 			.getSimpleName();
 	
 	private final static String ERRMSG = "Record error";
-	private final static int RECORD_TIME = 7;
+	private final static int RECORD_TIME = 4;
 	private static final int MSG_TEST_MIC_ING = 8738;
 	private static final int MSG_TEST_MIC_OVER = 13107;
 	private static final int MSG_TEST_MIC_START = 4369;
